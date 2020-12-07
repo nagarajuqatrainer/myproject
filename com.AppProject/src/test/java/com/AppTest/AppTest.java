@@ -30,8 +30,8 @@ public class AppTest
 		config=new ConfigReader();
 		
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
-		driver.findElement(By.name("user")).sendKeys("tester");
-		driver.findElement(By.name("btnSubmit")).click();
+		driver.findElement(By.name(config.getunameelement())).sendKeys(config.getusername());
+		driver.findElement(By.name(config.getbuttonelement())).click();
 		
 	}
 	
