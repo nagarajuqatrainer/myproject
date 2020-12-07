@@ -9,7 +9,7 @@ public class AppBaseSuite {
 	public static WebDriver driver;
 	
 	
-@BeforeSuite
+@BeforeSuite(alwaysRun=true)
 public void setupsuite() {
 	
 	System.out.println("Run Before suite");
