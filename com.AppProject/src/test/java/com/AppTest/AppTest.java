@@ -1,5 +1,6 @@
 package com.AppTest;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
@@ -29,8 +30,8 @@ public class AppTest
 		config=new ConfigReader();
 		loginpage=new LoginObjects(null);
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
-		loginpage=PageFactory.initElements(driver, LoginObjects.class);
-		loginpage.clickloginbutton();
+		driver.findElement(By.name("user")).sendKeys("tester");
+		driver.findElement(By.name("btnSubmit")).click();
 		
 	}
 	
