@@ -1,7 +1,6 @@
 package com.AppTest;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -9,8 +8,6 @@ import com.AppTest.Utilities.BrowserFactory;
 import com.AppTest.Utilities.ConfigReader;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-
-import appObjects.LoginObjects;
 
 
 

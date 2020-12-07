@@ -1,11 +1,9 @@
-package appObjects;
+package com.AppTest.Utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
-
-import com.AppTest.Utilities.ConfigReader;
 
 
 public class LoginObjects {
@@ -28,7 +26,7 @@ public class LoginObjects {
 	
 	
 	public LoginObjects(WebDriver driver) {
-		this.driver=driver;
+		LoginObjects.driver=driver;
 	}
 	
 	public void verifyusername(String un) {
