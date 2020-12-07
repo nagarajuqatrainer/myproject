@@ -22,18 +22,13 @@ public class AppTest
 	public static WebDriver driver;
 	public static ConfigReader config;
 	public static BrowserFactory browser;
-	public static LoginObjects loginpage;
+	//public static LoginObjects loginpage;
    
 	
 	@Test
 	public void verifyTest() {
 		config=new ConfigReader();
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
-		
-		loginpage=PageFactory.initElements(driver, LoginObjects.class);
-		loginpage.verifyusername(config.getusername());
-		loginpage.verifypassword(config.getpassword());
-		loginpage.clickloginbutton();
 		
 	}
 	
