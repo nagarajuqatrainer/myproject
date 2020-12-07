@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.AppTest.Utilities.BrowserFactory;
 import com.AppTest.Utilities.ConfigReader;
-import com.AppTest.Utilities.LoginObjects;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -22,13 +22,13 @@ public class AppTest
 	public static WebDriver driver;
 	public static ConfigReader config;
 	public static BrowserFactory browser;
-	public static LoginObjects loginpage;
+	//public static LoginObjects loginpage;
    
 	
 	@Test(alwaysRun=true)
 	public void verifyTest() {
 		config=new ConfigReader();
-		loginpage=new LoginObjects(null);
+		
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
 		driver.findElement(By.name("user")).sendKeys("tester");
 		driver.findElement(By.name("btnSubmit")).click();
