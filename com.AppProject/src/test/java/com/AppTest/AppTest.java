@@ -24,7 +24,7 @@ public class AppTest
 	public static LoginObjects loginpage;
    
 	
-	@Test
+	@Test(alwaysRun=true)
 	public void verifyTest() {
 		config=new ConfigReader();
 		loginpage=new LoginObjects(null);
