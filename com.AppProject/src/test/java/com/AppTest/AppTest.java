@@ -2,10 +2,11 @@ package com.AppTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
+import com.AppTest.Utilities.AppObjects;
 import com.AppTest.Utilities.BrowserFactory;
 import com.AppTest.Utilities.ConfigReader;
 
@@ -30,8 +31,11 @@ public class AppTest
 		config=new ConfigReader();
 		
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
-		driver.findElement(By.name(config.getunameelement())).sendKeys(config.getusername());
-		driver.findElement(By.name(config.getbuttonelement())).click();
+		
+		AppObjects loginpage = new AppObjects(driver);
+		loginpage.clickloginbutton();
+		loginpage.verifyusername("tester");
+		
 		
 	}
 	
