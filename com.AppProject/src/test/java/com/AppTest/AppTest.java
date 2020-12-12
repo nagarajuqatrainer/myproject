@@ -35,8 +35,17 @@ public class AppTest
 		
 		loginpage = new AppObjects(driver);
 		loginpage.verifyusername("tester");
+		System.out.println("verify username");
+		
 		loginpage.verifypassword("admin");
+		System.out.println("verify password");
+		
 		loginpage.clickloginbutton();
+		System.out.println("verify butto");
+		
+		
+		
+		
 		
 	}
 	

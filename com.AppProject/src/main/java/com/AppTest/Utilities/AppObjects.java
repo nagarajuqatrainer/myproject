@@ -40,7 +40,12 @@ public class AppObjects {
 			WebElement button = driver.findElement(By.name("btnSubmit"));
 			if(button.isEnabled()) {
 				button.click();
+				System.out.println("Action performed");
 				
+			}
+			else
+			{
+				System.out.println("Does not performed");
 			}
 			
 			
