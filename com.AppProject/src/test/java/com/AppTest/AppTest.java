@@ -18,26 +18,25 @@ import com.relevantcodes.extentreports.ExtentTest;
 public class AppTest 
 {
 	
-	public static ExtentReports report;
-	public static ExtentTest logger;
+
 	public static WebDriver driver;
 	public static ConfigReader config;
 	public static BrowserFactory browser;
-	//public static LoginObjects loginpage;
+	public static AppObjects loginpage;
+	
    
 	
 	@Test(alwaysRun=true)
 	public void verifyTest() {
 		config=new ConfigReader();
 		
+		
 		driver=BrowserFactory.getbrowser(ConfigReader.getbrowserdriver(), config.getbrowserurl());
 		
-		AppObjects loginpage = new AppObjects(driver);
-		loginpage.clickloginbutton();
-		System.out.println("click login button");
+		loginpage = new AppObjects(driver);
 		loginpage.verifyusername("tester");
-		System.out.println("verify user name");
-		
+		loginpage.verifypassword("admin");
+		loginpage.clickloginbutton();
 		
 	}
 	
